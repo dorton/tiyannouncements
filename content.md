@@ -1,40 +1,29 @@
 
- ## June 8 - June 12
+ ## June 15 - June 20
 ![](/images/logo_big.png)
 
 ----
 
 ##Announcements
 
-- Tuesday June 9 - Houston Ruby Brigade Meetup @TIY 7:00pm  
-- Wednesday June 10 - Portfolio Checkin with DoTron™
-- Friday June 12 - Half Way Celebration BBQ (12:30)
+- Wednesday June 17 - Javascript Crash Course @TIY 6:00pm  
 
-----
 
-![](/images/programmer.png)
 
 ----
 
 ##Guest Lecture
 
-###Friday June 12 at 10am
+###Friday June 20 at 10am
 
 <br>
 
-###Mohammad Azam - Blinds.com
+###Darren Ansley - besupercharged.com
 
 
 
-![](https://media.licdn.com/mpr/mpr/shrinknp_400_400/p/8/005/045/276/0bd5d68.jpg) <!-- .element: class="circle"  -->
+![](https://pbs.twimg.com/profile_images/477133200699838464/RcVLaO6x_400x400.png) <!-- .element: class="circle"  -->
 
-
-----
-##Celebrate
-
-- Friday marks the half way point of the class. Let's celebrate with grilled items!
-
-![](http://i.giphy.com/9QtLqr4MGjqkU.gif)
 
 ----
 
