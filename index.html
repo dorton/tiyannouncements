@@ -23,6 +23,10 @@
 
 		<!-- For syntax highlighting -->
 		<link rel="stylesheet" href="lib/css/zenburn.css">
+		<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.7.0/moment.min.js"></script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/tabletop.js/1.4.2/tabletop.js"></script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/underscore.js/1.8.3/underscore.js"></script>
+    <script src="https://code.jquery.com/jquery-1.10.2.js"></script>
 
 
 
@@ -47,14 +51,91 @@
 		<div class="reveal">
 			<div class="slides">
 
+<!-- Slide 1 -->
+				<section>
+					<h2><div id='today'></div></h2>
+
+					<img src="/images/logo_big.png" alt="" />
+
+				</section>
+
+<!-- Slide 2 -->
 				<!-- Use external markdown resource, separate slides by three newlines; vertical slides by two newlines -->
 				<section data-markdown="/content.md" data-separator="----" data-vertical="---"></section>
+
+<!-- Slide 3 -->
+				<section>
+					<img src="http://www.commitstrip.com/wp-content/uploads/2015/06/Strip-Conf%C3%A9rence-de-champion-650-finalenglish.jpg" alt="" />
+				</section>
+
+
+<!-- Slide 4 -->
+
+				<section>
+					<h2>Guest Lecture</h2>
+					<h3><div id="friday"></div></h3>
+					<h3><div id="name"></div></h3>
+					<h3><div id='company'></div></h3>
+					<h3><div id='pic'></div></h3>
+				</section>
+
+<!-- Slide 5 -->
+
+				<section>
+					<img src="https://www.evernote.com/l/ABPehZjR5UFE9ZuO1pHVLc4fOLlnXsnpJ4YB/image.png" alt="" />
+				</section>
 
 			</div>
 		</div>
 
 		<script src="lib/js/head.min.js"></script>
 		<script src="js/reveal.min.js"></script>
+
+		<script type="text/javascript">
+				window.onload = function() { init() };
+
+// <!-- Sets date using Moment.js -->
+
+						var friday = moment().startOf('week').add('days', 5).format("L");
+						var guestFriday = moment().startOf('week').add('days', 5).format("dddd MMMM Do");
+						var today = moment().format("ddd MMMM Do");
+
+						// document.getElementById('now').innerHTML = now;
+						document.getElementById('today').innerHTML = today;
+
+// <!-- Gets objects from a google doc -->
+
+						var public_spreadsheet_url = 'https://docs.google.com/spreadsheets/d/100X6xTACTklr9AOdU1oSAImf2jIfw2CZ9Hc6lck9RNI/pubhtml';
+
+						function init() {
+						Tabletop.init( { key: public_spreadsheet_url,
+														callback: showInfo,
+														simpleSheet: true } )
+						};
+
+
+
+						function showInfo(data, tabletop) {
+							// document.getElementById('name').innerHTML = data;
+							console.log(data)
+							// data.forEach(function(i){
+							//   var existing = document.getElementById('name').innerHTML;
+
+							var thisWeekGuest = _.findWhere(data, {'Date': friday});
+							var picImage = thisWeekGuest.Pic
+
+							document.getElementById('name').innerHTML = thisWeekGuest.Name;
+							document.getElementById('company').innerHTML = thisWeekGuest.Company;
+							document.getElementById('pic').innerHTML = '<img src="' + picImage + '"class="circle">';
+							document.getElementById('friday').innerHTML = guestFriday;
+
+
+							//   // console.log(i);
+							//
+							// });
+					}
+		</script>
+
 
 		<script>
 
