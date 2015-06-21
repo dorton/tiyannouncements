@@ -5,31 +5,21 @@
 		<meta charset="utf-8">
 
 		<title>The Iron Yard </title>
-
 		<meta name="description" content="A framework for easily creating beautiful presentations using HTML">
 		<meta name="author" content="Hakim El Hattab">
-
 		<meta name="apple-mobile-web-app-capable" content="yes" />
 		<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
-
 		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
-
 		<link rel="stylesheet" href="css/reveal.min.css">
-
 		<link rel="stylesheet" href="css/theme/default.css" id="theme">
-
 		<link rel="stylesheet" href="css/theme/tiy.css" id="theme">
-
-
 		<!-- For syntax highlighting -->
 		<link rel="stylesheet" href="lib/css/zenburn.css">
+
 		<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.7.0/moment.min.js"></script>
     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/tabletop.js/1.4.2/tabletop.js"></script>
     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/underscore.js/1.8.3/underscore.js"></script>
     <script src="https://code.jquery.com/jquery-1.10.2.js"></script>
-
-
-
 		<!-- If the query includes 'print-pdf', include the PDF print sheet -->
 		<script>
 			if( window.location.search.match( /print-pdf/gi ) ) {
@@ -60,7 +50,7 @@
 				</section>
 
 <!-- Slide 2 -->
-				<!-- Use external markdown resource, separate slides by three newlines; vertical slides by two newlines -->
+<!-- Use external markdown resource, separate slides by three newlines; vertical slides by two newlines -->
 				<section data-markdown="/content.md" data-separator="----" data-vertical="---"></section>
 
 <!-- Slide 3 -->
@@ -105,7 +95,7 @@
 
 // <!-- Gets objects from a google doc -->
 
-						var public_spreadsheet_url = 'https://docs.google.com/spreadsheets/d/100X6xTACTklr9AOdU1oSAImf2jIfw2CZ9Hc6lck9RNI/pubhtml';
+						var public_spreadsheet_url = '100X6xTACTklr9AOdU1oSAImf2jIfw2CZ9Hc6lck9RNI';
 
 						function init() {
 						Tabletop.init( { key: public_spreadsheet_url,
@@ -113,16 +103,13 @@
 														simpleSheet: true } )
 						};
 
-
+// Shows the info using _underscore
 
 						function showInfo(data, tabletop) {
-							// document.getElementById('name').innerHTML = data;
-							console.log(data)
-							// data.forEach(function(i){
-							//   var existing = document.getElementById('name').innerHTML;
 
 							var thisWeekGuest = _.findWhere(data, {'Date': friday});
 							var picImage = thisWeekGuest.Pic
+							console.log(thisWeekGuest)
 
 							document.getElementById('name').innerHTML = thisWeekGuest.Name;
 							document.getElementById('company').innerHTML = thisWeekGuest.Company;
@@ -130,9 +117,6 @@
 							document.getElementById('friday').innerHTML = guestFriday;
 
 
-							//   // console.log(i);
-							//
-							// });
 					}
 		</script>
 
@@ -152,7 +136,7 @@
 				autoSlideStoppable: false,
 
 				theme: Reveal.getQueryHash().theme, // available themes are in /css/theme
-				transition: Reveal.getQueryHash().transition || 'slide', // default/cube/page/concave/zoom/linear/fade/none
+				transition: Reveal.getQueryHash().transition || 'default', // default/cube/page/concave/zoom/linear/fade/none
 
 				// Parallax scrolling
 				//parallaxBackgroundImage: 'https://www.evernote.com/l/ABNIbi-Pb0hNyLIxW1cSjy2rVrO-tQ0BGQgB/image.png',
