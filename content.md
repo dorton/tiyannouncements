@@ -2,5 +2,5 @@
 
 ##Announcements
 
-- Tuesday June 23 - Node.JS Meetup @ Bouncing Pixel 6:00pm  
-- Friday June 26 - Iron Pints™ @ TIY 2:00pm - 4:00pm 
+- Thursday July 2 - Board Game Testing with JB
+- Friday July 3 - No Class. Building will be open.
