@@ -2,5 +2,6 @@
 
 ##Announcements
 
-- Tuesday July 7 - Civic Hack Night
-- Thursday July 9 - Job Talk in the Common Room with Dorton 1:00pm
+- Monday July 13 - Mock Interviews with Poetic Systems
+- Tuesday July 14 - Ruby Brigade Meetup 7pm @ TIY
+- Wednesday July 15 - Ruby Crash Course 6pm @TIY
