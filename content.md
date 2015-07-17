@@ -2,7 +2,7 @@
 
 ##Announcements
 
-- Monday July 13 - Mock Interviews with Poetic Systems
-- Tuesday July 14 - Ruby Brigade and Node.js "Noby" - Meetup 7pm @ TIY
-- Wednesday July 15 - Ruby Crash Course 6pm @TIY
-- Thursday July 16 - Job Talk: Cover Letters 2pm
+- Tuesday July 21 - First Round Practice Pitch for both classes. Common Room - 2pm
+- Thursday July 23 - Second Round Practice Pitch for both classes. Common Room - 2pm (Don't Break It!)
+- Friday July 24 - Demo Day 11am - 2pm
+- Friday July 24 - Celebrate!! 2pm - 5pm
