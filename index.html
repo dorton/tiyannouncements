@@ -49,42 +49,40 @@
 
 				</section>
 
-<!-- Demo Day Slide -->
-
-		<section>
-			<h2>Welcome to Demo Day!</h2>
-
-			<h3>See all projects at</h3>
-			<h3>theironyarddemoday.com</h3>
-
-		</section>
-
-		<section>
-			<h2>Congratulations Students!</h2>
-
-			<h3>You all are amazing.</h3>
-			<h3>We can't wait to see where you go from here!</h3>
-
-		</section>
-
 <!-- Slide 2 -->
 <!-- Use external markdown resource, separate slides by three newlines; vertical slides by two newlines -->
-			<!-- 	<section data-markdown="/content.md" data-separator="----" data-vertical="---"></section> -->
+			<section data-markdown="/content.md" data-separator="----" data-vertical="---"></section>
 
 <!-- Slide 3 -->
 				<section>
-					<img src= "http://www.commitstrip.com/wp-content/uploads/2015/07/Strip-La-madeleine-de-RAR-650-finalenglish.jpg" alt="" />
+					<img src= "http://www.commitstrip.com/wp-content/uploads/2015/08/Strip-%C3%A0-la-fran%C3%A7aise-650-finalenglish1.jpg" alt="" />
 				</section>
 
 
 <!-- Slide 4 -->
 
-<!-- <section>
+<section>
 	<h2>Guest Lecture</h2>
-	<h3><div id="friday"></div></h3>
-	<h3><div id="name"></div></h3>
-	<h3><div id='company'></div></h3>
-	<h3><div id='pic'></div></h3>
+	<h3>Friday August 28</h3>
+	<h3>Efrain Ayllon</h3>
+	<h3>Intuneto</h3>
+	<h3><img src="https://media.licdn.com/mpr/mpr/shrinknp_400_400/AAEAAQAAAAAAAAM4AAAAJDA1ZGQ2MjJkLTZmZjAtNDQ3OS05OTg0LTQ5YTQyODU4NmY3Ng.jpg" class="circle"></h3>
+</section>
+
+<section>
+	<h2>Guest Lecture</h2>
+	<h3>Friday August 28</h3>
+	<h3>Kevin Cruz</h3>
+	<h3>Intuneto</h3>
+	<h3><img src="https://media.licdn.com/mpr/mpr/shrinknp_400_400/AAEAAQAAAAAAAAJsAAAAJDcyZmRjMTBkLWUxZTctNDg4YS1iMzgyLTMxNTU1N2YxMjkwNQ.jpg" class="circle"></h3>
+</section>
+
+<!-- 				<section>
+	<h2>Guest Lecture</h2>
+	<h3><p class="date"></p></h3>
+	<h3><p class="name"></p></h3>
+	<h3><p class="company"></p></h3>
+	<h3><div id="pic"></div></h3>
 </section> -->
 
 <!-- Slide 5 -->
@@ -98,45 +96,7 @@
 
 		<script src="lib/js/head.min.js"></script>
 		<script src="js/reveal.min.js"></script>
-
-		<script type="text/javascript">
-				window.onload = function() { init() };
-
-// <!-- Sets date using Moment.js -->
-
-						var friday = moment().startOf('week').add('days', 1).format("L");
-						var guestFriday = moment().startOf('week').add('days', 1).format("dddd MMMM Do");
-						var today = moment().format("ddd MMMM Do");
-
-						// document.getElementById('now').innerHTML = now;
-						document.getElementById('today').innerHTML = today;
-
-// <!-- Gets objects from a google doc -->
-
-						var public_spreadsheet_url = '100X6xTACTklr9AOdU1oSAImf2jIfw2CZ9Hc6lck9RNI';
-
-						function init() {
-						Tabletop.init( { key: public_spreadsheet_url,
-														callback: showInfo,
-														simpleSheet: true } )
-						};
-
-// Shows the info using _underscore
-
-						function showInfo(data, tabletop) {
-
-							var thisWeekGuest = _.findWhere(data, {'Date': friday});
-							var picImage = thisWeekGuest.Pic
-							console.log(thisWeekGuest)
-
-							document.getElementById('name').innerHTML = thisWeekGuest.Name;
-							document.getElementById('company').innerHTML = thisWeekGuest.Company;
-							document.getElementById('pic').innerHTML = '<img src="' + picImage + '"class="circle">';
-							document.getElementById('friday').innerHTML = guestFriday;
-
-
-					}
-		</script>
+		<script src="js/all_the_things.js"></script>
 
 
 		<script>
